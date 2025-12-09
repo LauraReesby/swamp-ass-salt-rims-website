@@ -2,6 +2,6 @@
 
 import BauhausBrutalism from "../design-system"
 
-export default function SyntheticV0PageForDeployment() {
+export default function Page() {
   return <BauhausBrutalism />
 }

@@ -1,30 +1,76 @@
-# Bauhaus Brutalism Design System
+# Swamp Ass & Salt Rims
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
-
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/lreesb1-5320s-projects/v0-bauhaus-brutalism-design-system)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/Lphno2Mj14H)
+A margarita machine companion website featuring recipes, directions, and reviews, built with Next.js and React.
 
 ## Overview
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+This project provides a comprehensive guide for margarita enthusiasts, including machine operation instructions, drink recipes, and community reviews.
+
+## Getting Started
+
+### Install Dependencies
+
+```bash
+pnpm install
+```
+
+### Development
+
+Run the development server:
+
+```bash
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+### Build
+
+Create a production build:
+
+```bash
+pnpm build
+```
+
+### Start Production Server
+
+Run the production build locally:
+
+```bash
+pnpm start
+```
+
+### Lint
+
+Run the linter:
+
+```bash
+pnpm lint
+```
 
 ## Deployment
 
-Your project is live at:
+This project is configured for deployment on Netlify.
 
-**[https://vercel.com/lreesb1-5320s-projects/v0-bauhaus-brutalism-design-system](https://vercel.com/lreesb1-5320s-projects/v0-bauhaus-brutalism-design-system)**
+### Deploy to Netlify
 
-## Build your app
+1. Install the Netlify CLI:
+```bash
+npm install -g netlify-cli
+```
 
-Continue building your app on:
+2. Deploy:
+```bash
+netlify deploy --prod
+```
 
-**[https://v0.dev/chat/projects/Lphno2Mj14H](https://v0.dev/chat/projects/Lphno2Mj14H)**
+Or connect your repository to Netlify through their web interface for automatic deployments.
 
-## How It Works
+## Tech Stack
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+- **Framework:** Next.js 15
+- **UI Library:** React 19
+- **Styling:** Tailwind CSS
+- **Components:** Radix UI
+- **Icons:** Lucide React
+- **Font:** Geist Sans & Mono
