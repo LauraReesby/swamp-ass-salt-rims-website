@@ -9,8 +9,8 @@ export function RecipesTab() {
       </div>
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <div className="bg-white border-8 border-black p-8 shadow-brutal">
-          <h3 className="text-2xl font-black mb-4 uppercase border-b-4 border-black pb-2">The Classic Swamp Water</h3>
+        <div className="bg-card text-card-foreground border-8 border-foreground p-8 shadow-brutal">
+          <h3 className="text-2xl font-black mb-4 uppercase border-b-4 border-foreground pb-2">The Classic Swamp Water</h3>
           <p className="text-lg font-mono mb-4">The tried-and-true classic. Can't go wrong.</p>
           <ul className="list-disc list-inside font-mono space-y-2">
             <li>1 bottle (750ml) Tequila</li>
@@ -20,8 +20,8 @@ export function RecipesTab() {
           </ul>
         </div>
 
-        <div className="bg-white border-8 border-black p-8 shadow-brutal">
-          <h3 className="text-2xl font-black mb-4 uppercase border-b-4 border-black pb-2">Spicy Cypress Sipper</h3>
+        <div className="bg-card text-card-foreground border-8 border-foreground p-8 shadow-brutal">
+          <h3 className="text-2xl font-black mb-4 uppercase border-b-4 border-foreground pb-2">Spicy Cypress Sipper</h3>
           <p className="text-lg font-mono mb-4">For those who like a little kick in the pants.</p>
           <ul className="list-disc list-inside font-mono space-y-2">
             <li>1 bottle (750ml) Tequila</li>
@@ -32,8 +32,8 @@ export function RecipesTab() {
           </ul>
         </div>
 
-        <div className="bg-white border-8 border-black p-8 shadow-brutal">
-          <h3 className="text-2xl font-black mb-4 uppercase border-b-4 border-black pb-2">Bayou Berry Blitz</h3>
+        <div className="bg-card text-card-foreground border-8 border-foreground p-8 shadow-brutal">
+          <h3 className="text-2xl font-black mb-4 uppercase border-b-4 border-foreground pb-2">Bayou Berry Blitz</h3>
           <p className="text-lg font-mono mb-4">A sweeter option for a hot day.</p>
           <ul className="list-disc list-inside font-mono space-y-2">
             <li>1 bottle (750ml) Tequila</li>

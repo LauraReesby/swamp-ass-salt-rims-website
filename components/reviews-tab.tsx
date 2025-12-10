@@ -11,7 +11,7 @@ export function ReviewsTab() {
       </div>
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <div className="bg-white border-8 border-black p-8 shadow-brutal flex flex-col">
+        <div className="bg-card text-card-foreground border-8 border-foreground p-8 shadow-brutal flex flex-col">
           <div className="flex mb-2">
             <Star className="h-6 w-6 text-yellow-500 fill-current" />
             <Star className="h-6 w-6 text-yellow-500 fill-current" />
@@ -26,7 +26,7 @@ export function ReviewsTab() {
           <p className="text-right font-bold mt-4">- Boudreaux from Thibodaux</p>
         </div>
 
-        <div className="bg-white border-8 border-black p-8 shadow-brutal flex flex-col">
+        <div className="bg-card text-card-foreground border-8 border-foreground p-8 shadow-brutal flex flex-col">
           <div className="flex mb-2">
             <Star className="h-6 w-6 text-yellow-500 fill-current" />
             <Star className="h-6 w-6 text-yellow-500 fill-current" />
@@ -41,7 +41,7 @@ export function ReviewsTab() {
           <p className="text-right font-bold mt-4">- T-Claude from Lafayette</p>
         </div>
 
-        <div className="bg-white border-8 border-black p-8 shadow-brutal flex flex-col">
+        <div className="bg-card text-card-foreground border-8 border-foreground p-8 shadow-brutal flex flex-col">
           <div className="flex mb-2">
             <Star className="h-6 w-6 text-yellow-500 fill-current" />
             <Star className="h-6 w-6 text-yellow-500 fill-current" />

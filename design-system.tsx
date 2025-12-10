@@ -17,14 +17,14 @@ export default function BauhausBrutalism() {
       <div className="bg-background text-foreground min-h-screen">
         {/* Navigation */}
         <header className="sticky top-0 z-40 w-full border-b-8 border-black bg-primary">
-          <div className="container flex h-20 md:h-24 items-center justify-between">
+          <div className="container flex h-16 md:h-20 items-center justify-between">
             <div className="flex items-center gap-2 md:gap-4">
               <Image
                 src="/logo.png"
                 alt="Swamp Ass and Salt Rims Logo"
-                width={88}
-                height={88}
-                className="h-16 w-16 md:h-22 md:w-22 object-contain"
+                width={104}
+                height={104}
+                className="h-16 w-16 md:h-20 md:w-20 object-contain"
               />
               <span className="font-black text-xl md:text-2xl tracking-tighter text-white hidden sm:block">
                 SWAMP ASS & SALT RIMS

@@ -20,8 +20,8 @@ export function OverviewTab() {
       </div>
 
       <div className="grid gap-8 md:grid-cols-2">
-        <div className="bg-white border-8 border-black p-6 md:p-8 shadow-brutal">
-          <h2 className="text-2xl md:text-3xl font-black mb-6 uppercase border-b-4 border-black pb-2">
+        <div className="bg-card text-card-foreground border-8 border-foreground p-6 md:p-8 shadow-brutal">
+          <h2 className="text-2xl md:text-3xl font-black mb-6 uppercase border-b-4 border-foreground pb-2">
             WHY IT'S THE BEST, CHER
           </h2>
           <p className="text-base md:text-lg font-mono">

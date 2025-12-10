@@ -11,11 +11,11 @@ export function DirectionsTab() {
       </div>
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-        <div className="bg-white border-8 border-black p-6 md:p-8 shadow-brutal">
-          <div className="bg-red-600 text-white h-16 w-16 flex items-center justify-center text-4xl font-black border-4 border-black mb-4">
+        <div className="bg-card text-card-foreground border-8 border-foreground p-6 md:p-8 shadow-brutal">
+          <div className="bg-red-600 text-white h-16 w-16 flex items-center justify-center text-4xl font-black border-4 border-foreground mb-4">
             1
           </div>
-          <h3 className="text-xl md:text-2xl font-black mb-4 uppercase border-b-4 border-black pb-2">
+          <h3 className="text-xl md:text-2xl font-black mb-4 uppercase border-b-4 border-foreground pb-2">
             UNBOX & ASSEMBLE
           </h3>
           <p className="text-base md:text-lg font-mono">
@@ -24,33 +24,33 @@ export function DirectionsTab() {
           </p>
         </div>
 
-        <div className="bg-white border-8 border-black p-6 md:p-8 shadow-brutal">
-          <div className="bg-blue-600 text-white h-16 w-16 flex items-center justify-center text-4xl font-black border-4 border-black mb-4">
+        <div className="bg-card text-card-foreground border-8 border-foreground p-6 md:p-8 shadow-brutal">
+          <div className="bg-blue-600 text-white h-16 w-16 flex items-center justify-center text-4xl font-black border-4 border-foreground mb-4">
             2
           </div>
-          <h3 className="text-xl md:text-2xl font-black mb-4 uppercase border-b-4 border-black pb-2">ADD THE MIX</h3>
+          <h3 className="text-xl md:text-2xl font-black mb-4 uppercase border-b-4 border-foreground pb-2">ADD THE MIX</h3>
           <p className="text-base md:text-lg font-mono">
             Pour in your favorite margarita mix, tequila, and triple sec. See our recipes tab if you need some
             inspiration, you rascal.
           </p>
         </div>
 
-        <div className="bg-white border-8 border-black p-6 md:p-8 shadow-brutal">
-          <div className="bg-yellow-500 text-black h-16 w-16 flex items-center justify-center text-4xl font-black border-4 border-black mb-4">
+        <div className="bg-card text-card-foreground border-8 border-foreground p-6 md:p-8 shadow-brutal">
+          <div className="bg-yellow-500 text-black h-16 w-16 flex items-center justify-center text-4xl font-black border-4 border-foreground mb-4">
             3
           </div>
-          <h3 className="text-xl md:text-2xl font-black mb-4 uppercase border-b-4 border-black pb-2">ICE IT DOWN</h3>
+          <h3 className="text-xl md:text-2xl font-black mb-4 uppercase border-b-4 border-foreground pb-2">ICE IT DOWN</h3>
           <p className="text-base md:text-lg font-mono">
             Fill 'er up with ice. The more the better. You want it colder than a mother-in-law's stare. Give it a good
             stir.
           </p>
         </div>
 
-        <div className="bg-white border-8 border-black p-6 md:p-8 shadow-brutal">
-          <div className="bg-black text-white h-16 w-16 flex items-center justify-center text-4xl font-black border-4 border-black mb-4">
+        <div className="bg-card text-card-foreground border-8 border-foreground p-6 md:p-8 shadow-brutal">
+          <div className="bg-black text-white h-16 w-16 flex items-center justify-center text-4xl font-black border-4 border-foreground mb-4">
             4
           </div>
-          <h3 className="text-xl md:text-2xl font-black mb-4 uppercase border-b-4 border-black pb-2">
+          <h3 className="text-xl md:text-2xl font-black mb-4 uppercase border-b-4 border-foreground pb-2">
             DISPENSE & ENJOY
           </h3>
           <p className="text-base md:text-lg font-mono">
