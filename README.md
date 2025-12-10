@@ -11,7 +11,7 @@ This project provides a comprehensive guide for margarita enthusiasts, including
 ### Install Dependencies
 
 ```bash
-pnpm install
+npm install
 ```
 
 ### Development
@@ -19,7 +19,7 @@ pnpm install
 Run the development server:
 
 ```bash
-pnpm dev
+npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
@@ -29,7 +29,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the r
 Create a production build:
 
 ```bash
-pnpm build
+npm run build
 ```
 
 ### Start Production Server
@@ -37,7 +37,7 @@ pnpm build
 Run the production build locally:
 
 ```bash
-pnpm start
+npm run start
 ```
 
 ### Lint
@@ -45,7 +45,7 @@ pnpm start
 Run the linter:
 
 ```bash
-pnpm lint
+npm run lint
 ```
 
 ## Deployment
@@ -68,7 +68,7 @@ Or connect your repository to Netlify through their web interface for automatic 
 
 ## Tech Stack
 
-- **Framework:** Next.js 15
+- **Framework:** Next.js 16
 - **UI Library:** React 19
 - **Styling:** Tailwind CSS
 - **Components:** Radix UI

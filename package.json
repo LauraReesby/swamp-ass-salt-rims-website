@@ -2,10 +2,14 @@
   "name": "swamp-ass-salt-rims",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "lint": "next lint",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "start": "next start"
   },
   "dependencies": {
@@ -46,7 +50,7 @@
     "geist": "latest",
     "input-otp": "latest",
     "lucide-react": "^0.454.0",
-    "next": "15.2.4",
+    "next": "^16.0.0",
     "next-themes": "latest",
     "react": "^19",
     "react-day-picker": "latest",
@@ -64,6 +68,8 @@
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.0.8",
     "postcss": "^8.5",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
