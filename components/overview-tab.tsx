@@ -24,11 +24,24 @@ export function OverviewTab() {
           <h2 className="text-2xl md:text-3xl font-black mb-6 uppercase border-b-4 border-foreground pb-2">
             WHY IT'S THE BEST, CHER
           </h2>
-          <p className="text-base md:text-lg font-mono">
-            Forget them fancy, fragile blenders. This ain't your mama's kitchen appliance. We're talkin' a rugged,
-            no-nonsense, booze-chillin' workhorse. It's built with the same grit and determination as a gator in a turf
-            war. Simple, powerful, and always ready for a good time.
-          </p>
+          <div className="space-y-4 text-left">
+            <p className="text-base md:text-lg font-mono">
+              Forget them fancy, fragile blenders. This ain't your mama's kitchen appliance. We're talkin' a rugged,
+              no-nonsense, booze-chillin' workhorse. It's built with the same grit and determination as a gator in a
+              turf war. Simple, powerful, and always ready for a good time—plus it comes with a warranty written in pure
+              spite and an ego bigger than Uncle Dale's lifted truck.
+            </p>
+            <p className="text-base md:text-lg font-mono">
+              We designed it so even your cousin who thinks HDMI is a new tequila can run it. Big handles, bold switches,
+              zero mystery buttons. If it breaks, you probably ran it over with the truck—tell us the story, we'll still
+              fix it.
+            </p>
+            <p className="text-base md:text-lg font-mono">
+              Cleanup? Hose it down, wipe it off, keep the party moving. This machine fears nothing: spilled salt, rogue
+              limes, or whatever crawled out of the bayou. It lives to serve frozen happiness and roast anyone who says
+              they prefer beer.
+            </p>
+          </div>
         </div>
         <div className="bg-black text-white border-8 border-black p-4 md:p-8 shadow-brutal-inverse">
           <Image

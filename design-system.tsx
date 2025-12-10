@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { Circle, Square } from "lucide-react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Image from "next/image"
@@ -11,10 +11,46 @@ import { ReviewsTab } from "@/components/reviews-tab"
 
 export default function BauhausBrutalism() {
   const [darkMode, setDarkMode] = useState(false)
+  const isDecember = useMemo(() => new Date().getMonth() === 11, [])
+  const snowflakes = useMemo(
+    () =>
+      Array.from({ length: 26 }, (_, i) => ({
+        id: i,
+        left: (i * 17) % 100,
+        delay: (i * 7) % 5,
+        duration: 6 + ((i * 13) % 6),
+        size: 6 + ((i * 19) % 10),
+      })),
+    []
+  )
+  const [showSnow, setShowSnow] = useState(isDecember)
+
+  useEffect(() => {
+    if (!isDecember || !showSnow) return
+    const timer = setTimeout(() => setShowSnow(false), 9000)
+    return () => clearTimeout(timer)
+  }, [isDecember, showSnow])
 
   return (
     <div className={`min-h-screen font-mono ${darkMode ? "dark" : ""}`}>
       <div className="bg-background text-foreground min-h-screen">
+        {showSnow ? (
+          <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden">
+            {snowflakes.map(flake => (
+              <span
+                key={flake.id}
+                className="snowflake"
+                style={{
+                  left: `${flake.left}%`,
+                  animationDelay: `${flake.delay}s`,
+                  animationDuration: `${flake.duration}s`,
+                  width: `${flake.size}px`,
+                  height: `${flake.size}px`,
+                }}
+              />
+            ))}
+          </div>
+        ) : null}
         {/* Navigation */}
         <header className="sticky top-0 z-40 w-full border-b-8 border-black bg-primary">
           <div className="container flex h-16 md:h-20 items-center justify-between">
@@ -32,7 +68,10 @@ export default function BauhausBrutalism() {
             </div>
             <div className="flex items-center gap-4">
               <button
-                onClick={() => setDarkMode(!darkMode)}
+                onClick={() => {
+                  setDarkMode(!darkMode)
+                  if (isDecember) setShowSnow(true)
+                }}
                 className="h-10 w-10 bg-yellow-500 border-4 border-black flex items-center justify-center hover:bg-yellow-400 transition-colors"
               >
                 {darkMode ? <Circle className="h-5 w-5" /> : <Square className="h-5 w-5" />}
