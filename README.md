@@ -1,7 +1,7 @@
-![Logo](public/logo.png)
-
-> 🎉🍹 Bienvenue to the most overconfident margarita machine site this side of the bayou. It’s loud, it’s proud, and it will judge you if you order a beer instead.  
-> 🤖 Built with modern horsepower, seasoned with Cajun spice, and garnished with a salt rim the size of Uncle Dale’s truck tires.
+# Swamp Ass & Salt Rims
+<p align="center" style="margin: 0.25rem 0 0.75rem;">
+  <img src="public/logo.png" alt="Swamp Ass & Salt Rims" width="200" />
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js&logoColor=white" />
