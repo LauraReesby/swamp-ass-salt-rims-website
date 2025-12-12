@@ -6,6 +6,17 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Swamp Ass & Salt Rims',
   description: 'Margarita machine recipes, directions, and reviews',
+  openGraph: {
+    title: 'Swamp Ass & Salt Rims',
+    description: 'Margarita machine recipes, directions, and reviews',
+    images: ['/logo.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Swamp Ass & Salt Rims',
+    description: 'Margarita machine recipes, directions, and reviews',
+    images: ['/logo.png'],
+  },
 }
 
 export default function RootLayout({

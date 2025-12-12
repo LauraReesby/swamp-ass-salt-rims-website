@@ -1,76 +1,41 @@
-# Swamp Ass & Salt Rims
+![Logo](public/logo.png)
 
-A margarita machine companion website featuring recipes, directions, and reviews, built with Next.js and React.
+> 🎉🍹 Bienvenue to the most overconfident margarita machine site this side of the bayou. It’s loud, it’s proud, and it will judge you if you order a beer instead.  
+> 🤖 Built with modern horsepower, seasoned with Cajun spice, and garnished with a salt rim the size of Uncle Dale’s truck tires.
 
-## Overview
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/Tailwind-Bauhaus_Yellow-ffeb3b?style=for-the-badge&logo=tailwindcss&logoColor=black" />
+  <img src="https://img.shields.io/badge/Node-22.x-darkgreen?style=for-the-badge&logo=node.js&logoColor=white" />
+</p>
 
-This project provides a comprehensive guide for margarita enthusiasts, including machine operation instructions, drink recipes, and community reviews.
+## What the heck is this?
+A companion site for the Swamp Ass & Salt Rims margarita rig: directions, recipes, reviews, and enough Cajun attitude to make your uncle blush. Built in Next.js 16 because this beast deserved modern horsepower.
 
-## Getting Started
+## Quickstart (hold onto your hat)
+- 🧠 Node 22.x, cher. `nvm use 22`
+- 📦 Install the goods: `npm install`
+- 💻 Fire up dev: `npm run dev` then sashay to http://localhost:3000
 
-### Install Dependencies
+## Build & Preview (no training wheels)
+- 🏗️ Production build: `npm run build`
+- 🚚 Serve the goods: `npm run start`
+- 🧹 Lint it (or else): `npm run lint`
+- 🩹 Lazy fix pass: `npm run lint:fix`
 
-```bash
-npm install
-```
+## Deploy (Netlify-approved)
+- ✅ Config’s ready to roll with `npm run build` as the command.
+- 🚀 CLI option:  
+  1) `npm install -g netlify-cli`  
+  2) `netlify deploy --prod`
+- 🌐 Or just connect the repo in the Netlify UI and let it rip.
 
-### Development
+## Flavor notes (a/k/a tech stack)
+- 🎨 Framework: Next.js 16 (Turbopack default, webpack if you’re feeling nostalgic)
+- 🧊 UI: React 19, Radix UI, Tailwind CSS, Lucide icons, Geist fonts
+- 🛠️ Tooling: TypeScript, ESLint, Tailwind Animate
 
-Run the development server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
-
-### Build
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-### Start Production Server
-
-Run the production build locally:
-
-```bash
-npm run start
-```
-
-### Lint
-
-Run the linter:
-
-```bash
-npm run lint
-```
-
-## Deployment
-
-This project is configured for deployment on Netlify.
-
-### Deploy to Netlify
-
-1. Install the Netlify CLI:
-```bash
-npm install -g netlify-cli
-```
-
-2. Deploy:
-```bash
-netlify deploy --prod
-```
-
-Or connect your repository to Netlify through their web interface for automatic deployments.
-
-## Tech Stack
-
-- **Framework:** Next.js 16
-- **UI Library:** React 19
-- **Styling:** Tailwind CSS
-- **Components:** Radix UI
-- **Icons:** Lucide React
-- **Font:** Geist Sans & Mono
+## House rules
+- 🌒 Dark mode approved, ❄️ snowflakes in December, warranty written in pure spite.
+- 💥 If it breaks, tell us the story. We’ll laugh first, then fix it.
