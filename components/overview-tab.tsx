@@ -45,10 +45,11 @@ export function OverviewTab() {
         </div>
         <div className="bg-black text-white border-8 border-black p-4 md:p-8 shadow-brutal-inverse">
           <Image
-            src="/industrial-margarita-rig.png"
+            src="/industrial-margarita-rig.avif"
             alt="Industrial 3-gallon margarita rig for LSU tailgating"
-            width={600}
-            height={600}
+            width={1024}
+            height={1536}
+            sizes="(min-width: 768px) 50vw, 100vw"
             className="w-full h-auto border-4 border-white"
           />
         </div>
