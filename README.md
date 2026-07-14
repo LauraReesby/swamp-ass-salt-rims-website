@@ -37,5 +37,5 @@ A companion site for the Swamp Ass & Salt Rims margarita rig: directions, recipe
 - 🛠️ Tooling: TypeScript, ESLint, Tailwind Animate
 
 ## House rules
-- 🌒 Dark mode approved, ❄️ snowflakes in December, warranty written in pure spite.
+- 🌒 Dark mode approved, ☀️ heat advisories in summer, warranty written in pure spite.
 - 💥 If it breaks, tell us the story. We’ll laugh first, then fix it.

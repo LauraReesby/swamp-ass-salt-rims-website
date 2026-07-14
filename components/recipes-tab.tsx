@@ -1,4 +1,4 @@
-export function RecipesTab() {
+export function RecipesTab({ isSummer = false }: { isSummer?: boolean }) {
   return (
     <section className="space-y-12">
       <div className="space-y-4 text-center">
@@ -6,26 +6,37 @@ export function RecipesTab() {
           GATOR-APPROVED RECIPES
         </h2>
         <p className="text-xl max-w-2xl mx-auto">A few of our favorite concoctions to get you started.</p>
+        {isSummer ? (
+          <p className="text-lg font-black max-w-3xl mx-auto uppercase">
+            SUMMER OPERATING CONDITIONS: 96°F, 900% HUMIDITY, ZERO REGRETS.
+          </p>
+        ) : null}
       </div>
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         <div className="relative bg-card text-card-foreground border-8 border-foreground p-8 shadow-brutal">
           <span className="absolute -top-7 -left-7">
             <svg viewBox="0 0 64 64" className="h-14 w-14 drop-shadow-[4px_4px_0_rgba(0,0,0,0.25)]" aria-hidden="true">
-              <path d="M32 6 6 42h52L32 6Z" fill="#dc2626" stroke="black" strokeWidth="3" />
-              <rect x="10" y="40" width="44" height="10" rx="4" fill="white" stroke="black" strokeWidth="3" />
-              <circle cx="48" cy="14" r="6" fill="white" stroke="black" strokeWidth="3" />
+              <g fill="white" stroke="black" strokeWidth="3" strokeLinecap="square">
+                <path d="M32 2v10M32 52v10M2 32h10M52 32h10" />
+                <path d="m11 11 8 8M45 45l8 8M53 11l-8 8M19 45l-8 8" />
+              </g>
+              <circle cx="32" cy="32" r="19" fill="#facc15" stroke="black" strokeWidth="4" />
+              <circle cx="26" cy="27" r="6" fill="white" stroke="black" strokeWidth="3" />
+              <circle cx="39" cy="38" r="7" fill="#dc2626" stroke="black" strokeWidth="3" />
             </svg>
           </span>
-          <h3 className="text-2xl font-black mb-4 uppercase border-b-4 border-foreground pb-2">Jack Frost Cocktail</h3>
+          <h3 className="text-2xl font-black mb-4 uppercase border-b-4 border-foreground pb-2">Heat Advisory</h3>
           <p className="text-lg font-mono mb-4">
-            Wintery, icy, and guaranteed to make you forget it's 82° in Lafayette.
+            Cold enough to make the humidity mind its own damn business.
           </p>
           <ul className="list-disc list-inside font-mono space-y-2">
-            <li>8 oz coconut rum (or vodka if you're shy—rum is better)</li>
-            <li>8 oz blue Curaçao</li>
-            <li>8 oz cream of coconut (not coconut cream)</li>
+            <li>8 oz coconut rum</li>
+            <li>8 oz mango nectar</li>
             <li>16 oz pineapple juice</li>
+            <li>4 oz fresh lime juice</li>
+            <li>Tajín rim</li>
+            <li>Optional splash of hot sauce for people who ignore good advice</li>
           </ul>
         </div>
 

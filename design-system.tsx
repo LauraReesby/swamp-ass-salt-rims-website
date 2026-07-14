@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useMemo, useState } from "react"
+import { useState, useSyncExternalStore } from "react"
 import { Circle, Square } from "lucide-react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Image from "next/image"
@@ -8,44 +8,49 @@ import { OverviewTab } from "@/components/overview-tab"
 import { DirectionsTab } from "@/components/directions-tab"
 import { RecipesTab } from "@/components/recipes-tab"
 import { ReviewsTab } from "@/components/reviews-tab"
+import { isSummerMonth } from "@/lib/season"
+
+const HEAT_BUBBLES = Array.from({ length: 12 }, (_, index) => ({
+  id: index,
+  left: (index * 37 + 7) % 96,
+  delay: (index % 4) * 0.12,
+  duration: 1.8 + (index % 3) * 0.25,
+  size: 18 + ((index * 11) % 28),
+  color: ["#facc15", "#dc2626", "#f97316"][index % 3],
+}))
+
+const subscribeToSeason = () => () => {}
+const getSummerSnapshot = () => isSummerMonth(new Date().getMonth())
+const getServerSummerSnapshot = () => false
 
 export default function BauhausBrutalism() {
   const [darkMode, setDarkMode] = useState(false)
-  const isDecember = useMemo(() => new Date().getMonth() === 11, [])
-  const snowflakes = useMemo(
-    () =>
-      Array.from({ length: 26 }, (_, i) => ({
-        id: i,
-        left: (i * 17) % 100,
-        delay: (i * 7) % 5,
-        duration: 6 + ((i * 13) % 6),
-        size: 6 + ((i * 19) % 10),
-      })),
-    []
-  )
-  const [showSnow, setShowSnow] = useState(isDecember)
+  const [heatReplay, setHeatReplay] = useState(0)
+  const isSummer = useSyncExternalStore(subscribeToSeason, getSummerSnapshot, getServerSummerSnapshot)
 
-  useEffect(() => {
-    if (!isDecember || !showSnow) return
-    const timer = setTimeout(() => setShowSnow(false), 9000)
-    return () => clearTimeout(timer)
-  }, [isDecember, showSnow])
+  const toggleDarkMode = () => {
+    setDarkMode(current => !current)
+    if (isSummer) {
+      setHeatReplay(current => current + 1)
+    }
+  }
 
   return (
     <div className={`min-h-screen font-mono ${darkMode ? "dark" : ""}`}>
       <div className="bg-background text-foreground min-h-screen">
-        {showSnow ? (
-          <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden">
-            {snowflakes.map(flake => (
+        {isSummer ? (
+          <div key={heatReplay} className="pointer-events-none fixed inset-0 z-50 overflow-hidden" aria-hidden="true">
+            {HEAT_BUBBLES.map(bubble => (
               <span
-                key={flake.id}
-                className="snowflake"
+                key={bubble.id}
+                className="heat-bubble"
                 style={{
-                  left: `${flake.left}%`,
-                  animationDelay: `${flake.delay}s`,
-                  animationDuration: `${flake.duration}s`,
-                  width: `${flake.size}px`,
-                  height: `${flake.size}px`,
+                  left: `${bubble.left}%`,
+                  animationDelay: `${bubble.delay}s`,
+                  animationDuration: `${bubble.duration}s`,
+                  width: `${bubble.size}px`,
+                  height: `${bubble.size}px`,
+                  backgroundColor: bubble.color,
                 }}
               />
             ))}
@@ -68,10 +73,8 @@ export default function BauhausBrutalism() {
             </div>
             <div className="flex items-center gap-4">
               <button
-                onClick={() => {
-                  setDarkMode(!darkMode)
-                  if (isDecember) setShowSnow(true)
-                }}
+                onClick={toggleDarkMode}
+                aria-label={`Switch to ${darkMode ? "light" : "dark"} mode`}
                 className="h-10 w-10 bg-yellow-500 border-4 border-black flex items-center justify-center hover:bg-yellow-400 transition-colors"
               >
                 {darkMode ? <Circle className="h-5 w-5" /> : <Square className="h-5 w-5" />}
@@ -81,14 +84,14 @@ export default function BauhausBrutalism() {
         </header>
 
         <main className="container py-8 md:py-12">
-          <MargaritaMachineTabs />
+          <MargaritaMachineTabs isSummer={isSummer} />
         </main>
       </div>
     </div>
   )
 }
 
-function MargaritaMachineTabs() {
+function MargaritaMachineTabs({ isSummer }: { isSummer: boolean }) {
   return (
     <Tabs defaultValue="overview" className="space-y-8 md:space-y-12">
       <div className="flex justify-center">
@@ -131,7 +134,7 @@ function MargaritaMachineTabs() {
         <DirectionsTab />
       </TabsContent>
       <TabsContent value="recipes">
-        <RecipesTab />
+        <RecipesTab isSummer={isSummer} />
       </TabsContent>
       <TabsContent value="reviews">
         <ReviewsTab />

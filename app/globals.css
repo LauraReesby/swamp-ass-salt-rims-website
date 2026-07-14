@@ -90,40 +90,32 @@
     box-shadow: 0.5rem 0.5rem 0 0 white;
   }
 
-  .frosted::after {
-    content: "";
+  .heat-bubble {
     position: absolute;
-    inset: 0;
-    border: 2px dashed white;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 150ms ease;
-  }
-
-  .dark .frosted::after {
-    opacity: 0.6;
-  }
-
-  .snowflake {
-    position: absolute;
-    top: -10%;
+    bottom: -4rem;
     border-radius: 9999px;
-    background: radial-gradient(circle at 30% 30%, white 60%, rgba(255, 255, 255, 0) 70%);
-    box-shadow: 0 0 0 2px black;
-    animation-name: snowfall;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    opacity: 0.9;
+    border: 4px solid black;
+    animation: heat-drift 2.2s ease-out both;
   }
 }
 
-@keyframes snowfall {
+@keyframes heat-drift {
   0% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
+    transform: translate3d(0, 0, 0) scale(0.75);
+    opacity: 0;
+  }
+  15% {
     opacity: 0.9;
   }
   100% {
-    transform: translate3d(0, 110vh, 0) rotate(120deg);
-    opacity: 0.1;
+    transform: translate3d(0, -75vh, 0) scale(1.15);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heat-bubble {
+    display: none;
+    animation: none;
   }
 }
